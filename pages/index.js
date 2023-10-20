@@ -29,7 +29,7 @@ const index = () => {
               <div className={styles.itemForm}>
                 <p>Номер телефона</p>
                 <i className={styles.numberStart} aria-hidden="true">+7</i>
-              <input className={styles.input} type="text" pattern="\d*" name="tel" required  maxLength="10" onChange={(event) => setTel("7" + event.target.value)} />
+              <input className={styles.input} type="text" pattern="^(([0-9]){10})$" name="tel" placeholder={"9xx-xxx-xx-xx"} required  maxLength="10" onChange={(event) => setTel("7" + event.target.value)} />
               </div>
               <button type="submit" onSubmit={(event) => submitFunction(event)} className={styles.buttonSubmit}>Отправить</button>
         </form>
