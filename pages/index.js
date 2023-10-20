@@ -24,7 +24,7 @@ const index = () => {
         <form className={styles.form} >
           <div className={styles.itemForm} >
           <p>Имя</p>
-              <input className={styles.input} style={{paddingLeft:"7px"}} required name="name"  onChange={(event) => setName(event.target.value)} />
+              <input className={styles.input} style={{paddingLeft:"7px"}} pattern="^[а-яА-ЯёЁ]+$" maxLength="20" placeholder="Иван" required name="name"  onChange={(event) => setName(event.target.value)} />
           </div>
               <div className={styles.itemForm}>
                 <p>Номер телефона</p>
