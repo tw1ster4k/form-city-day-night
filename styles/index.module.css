@@ -54,3 +54,7 @@
     font-size: 17px;
     cursor: pointer;
 }
+
+.buttonSubmit:active{
+    background-color: rgb(154, 154, 154);
+}
