@@ -1,21 +1,19 @@
 import Head from "next/head"
 import { useState } from "react"
 import styles from "../styles/index.module.css"
-import Logo from "../Logo.png"
-import Image from "next/image"
 
 const index = () => {
   const [name, setName] = useState('')
   const [tel, setTel] = useState('')
   
 
-  const submitFunction = (event) => {
-    event.preventDefault()
+  const submitFunction = () => {
+    console.log("aaaaa")
     if(typeof window !== 'undefined') {
       window.Telegram.WebApp.sendData(JSON.stringify({name: name, number: tel}))
-      
     }
   }
+
   return (
     <>
         <Head>
@@ -30,9 +28,9 @@ const index = () => {
               <div className={styles.itemForm}>
                 <p>Номер телефона</p>
                 <i className={styles.numberStart} aria-hidden="true">+7</i>
-              <input className={styles.input} type="text" pattern="^(([0-9]){10})$" name="tel" placeholder={"9xx xxx xx xx"} required  maxLength="10" onChange={(event) => setTel("7" + event.target.value)} />
+              <input className={styles.input} type="text" pattern="^(([0-9]){10})$" name="tel" placeholder={"9xx-xxx-xx-xx"} required  maxLength="10" onChange={(event) => setTel("7" + event.target.value)} />
               </div>
-              <button type="submit" onSubmit={(event) => submitFunction(event)} className={styles.buttonSubmit}>Отправить</button>
+              <button type="submit" onClick={() => submitFunction()} className={styles.buttonSubmit}>Отправить</button>
         </form>
         </div>
     </>
