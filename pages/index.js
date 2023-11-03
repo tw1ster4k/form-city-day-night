@@ -1,6 +1,8 @@
 import Head from "next/head"
 import { useState } from "react"
 import styles from "../styles/index.module.css"
+import Logo from "../Logo.png"
+import Image from "next/image"
 
 const index = () => {
   const [name, setName] = useState('')
@@ -19,8 +21,7 @@ const index = () => {
         <Head>
             <script src="https://telegram.org/js/telegram-web-app.js"></script>
         </Head>
-        <div className={styles.container}>
-
+        <div className={styles.container}>  
         <form className={styles.form} >
           <div className={styles.itemForm} >
           <p>Имя</p>
@@ -29,7 +30,7 @@ const index = () => {
               <div className={styles.itemForm}>
                 <p>Номер телефона</p>
                 <i className={styles.numberStart} aria-hidden="true">+7</i>
-              <input className={styles.input} type="text" pattern="^(([0-9]){10})$" name="tel" placeholder={"9xx-xxx-xx-xx"} required  maxLength="10" onChange={(event) => setTel("7" + event.target.value)} />
+              <input className={styles.input} type="text" pattern="^(([0-9]){10})$" name="tel" placeholder={"9xx xxx xx xx"} required  maxLength="10" onChange={(event) => setTel("7" + event.target.value)} />
               </div>
               <button type="submit" onSubmit={(event) => submitFunction(event)} className={styles.buttonSubmit}>Отправить</button>
         </form>

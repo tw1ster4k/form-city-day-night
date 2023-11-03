@@ -1,15 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+@font-face {
+    font-family: 'Hero';
+    src: local('Hero Light'), local('Hero-Light'), url('../hero/Herolight.woff2') format('woff2'), url('../hero/Herolight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
 
 .container{
  height: 100vh;
- background-color: #6D6D6D;
+ background: linear-gradient(180deg, #02253F 0%, #010204 100%);
  justify-content:space-evenly;
  display: flex;
  flex-direction: column;
 }
 
 .form{
-    background-color: #6D6D6D;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,10 +23,10 @@
     width: 300px;
     padding-left: 25px;
     height: 30px;
-    background-color: gainsboro;
+    background-color: #213849;
     border: none;
     border-radius: 10px;
-    color: black;
+    color: #fff;
 }
 
 
@@ -31,26 +35,29 @@
     z-index: 1;
     margin-right: -21px;
     font-size: 13px;
-    color: rgb(0, 0, 0);
+    color: #fff;
 }
 
 .itemForm{
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
-    font-family: "Roboto", sans-serif;
-    color: whitesmoke;
+    font-family: "Hero", sans-serif;
+    color: #fff;
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 200;
 }
 
 .buttonSubmit{
-    color: whitesmoke;
-    background-color: gray;
+    color: #000;
+    background-color: #e4e9ed;
     border-radius: 10px;
     height: 50px;
     width: 150px;
-    border: 2px solid rgb(92, 92, 92);
-    font-family: "Roboto", sans-serif;
-    letter-spacing: 2px;
+    border: none;
+    font-family: "Hero", sans-serif;
+    letter-spacing: 1px;
     font-size: 17px;
     cursor: pointer;
 }
